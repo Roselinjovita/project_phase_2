@@ -1,0 +1,74 @@
+{
+  "name": "Session",
+  "type": "object",
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "description": "Reference to child profile"
+    },
+    "exercise_id": {
+      "type": "string",
+      "description": "Reference to exercise if applicable"
+    },
+    "recording_url": {
+      "type": "string",
+      "description": "URL to audio recording"
+    },
+    "duration_seconds": {
+      "type": "number",
+      "description": "Length of recording in seconds"
+    },
+    "language_used": {
+      "type": "string",
+      "enum": [
+        "Tamil",
+        "English",
+        "Mixed"
+      ],
+      "description": "Language detected in session"
+    },
+    "transcript": {
+      "type": "string",
+      "description": "Transcribed text from speech"
+    },
+    "clarity_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Speech clarity score (0-100)"
+    },
+    "fluency_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Fluency score (0-100)"
+    },
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Overall confidence score (0-100)"
+    },
+    "ai_feedback": {
+      "type": "string",
+      "description": "AI-generated feedback and suggestions"
+    },
+    "areas_of_improvement": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Specific areas to work on"
+    },
+    "positive_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Positive highlights from the session"
+    }
+  },
+  "required": [
+    "profile_id"
+  ]
+}

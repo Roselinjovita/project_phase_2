@@ -1,0 +1,49 @@
+{
+  "name": "ChildProfile",
+  "type": "object",
+  "properties": {
+    "child_name": {
+      "type": "string",
+      "description": "Name of the child"
+    },
+    "age": {
+      "type": "number",
+      "description": "Age in years"
+    },
+    "primary_language": {
+      "type": "string",
+      "enum": [
+        "Tamil",
+        "English",
+        "Both"
+      ],
+      "default": "Both",
+      "description": "Primary language for therapy"
+    },
+    "therapy_level": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "default": "beginner",
+      "description": "Current therapy difficulty level"
+    },
+    "focus_areas": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Areas to focus on (e.g., pronunciation, fluency, vocabulary)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or preferences"
+    }
+  },
+  "required": [
+    "child_name",
+    "age"
+  ]
+}

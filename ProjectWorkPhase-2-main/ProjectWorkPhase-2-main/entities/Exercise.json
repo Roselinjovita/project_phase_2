@@ -1,0 +1,67 @@
+{
+  "name": "Exercise",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Exercise title"
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "Tamil",
+        "English",
+        "Both"
+      ],
+      "description": "Language for this exercise"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
+      "description": "Difficulty level"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "pronunciation",
+        "fluency",
+        "vocabulary",
+        "conversation",
+        "sounds"
+      ],
+      "description": "Exercise category"
+    },
+    "prompt": {
+      "type": "string",
+      "description": "Instructions for the child"
+    },
+    "example_words": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Example words or phrases to practice"
+    },
+    "target_sounds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Specific sounds to focus on"
+    },
+    "tips": {
+      "type": "string",
+      "description": "Tips for therapist or parent"
+    }
+  },
+  "required": [
+    "title",
+    "language",
+    "difficulty",
+    "prompt"
+  ]
+}
